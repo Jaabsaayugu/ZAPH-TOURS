@@ -1,4 +1,3 @@
-import { Grid3x3 } from "@mui/icons-material";
 import { Box, Typography, Grid, Chip, Container } from "@mui/material";
 
 const About = () => {

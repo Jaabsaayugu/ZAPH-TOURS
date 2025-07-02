@@ -4,7 +4,7 @@ import About from "../components/about";
 import FeaturedDestinations from "../components/featuredDestination";
 import Testimonials from "../components/testimonials";
 import Newsletter from "../components/newsletter";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 
 const Home = () => {
   return (
