@@ -41,7 +41,7 @@ const Newsletter = () => {
             gutterBottom
             sx={{ color: "#rgb(226, 149, 33)", mb: 3 }}
           >
-            Stay Updated with Zaph Tours
+            Keep In Touch
           </Typography>
           <Typography variant="body1" sx={{ mb: 4, color: "#666" }}>
             Subscribe to our newsletter for weekly updates on safari adventures,
@@ -71,6 +71,7 @@ const Newsletter = () => {
               sx={{ mb: 4 }}
               required
             />
+
             <Button
               type="submit"
               variant="contained"
@@ -78,15 +79,12 @@ const Newsletter = () => {
               fullWidth
               sx={{
                 background:
-                  "linear-gradient(to right, #rgb(226, 149, 33),rgb(235, 161, 115))",
+                  "linear-gradient(to right, rgb(226, 149, 33), rgb(229, 122, 56))",
                 borderRadius: "30px",
-                py: 2,
-                fontSize: "1.1rem",
+                px: 2,
                 "&:hover": {
                   background:
-                    "linear-gradient(to right, #rgb(226, 149, 33),rgb(162, 169, 231))",
-                  transform: "scale(1.05)",
-                  boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
+                    "linear-gradient(to right, rgb(226, 149, 33), rgb(178, 99, 8))",
                 },
               }}
             >
@@ -100,7 +98,7 @@ const Newsletter = () => {
         open={snackbarOpen}
         autoHideDuration={4000}
         onClose={() => setSnackbarOpen(false)}
-        message="Thank you for subscribing! Welcome to the Zaph Tours family!"
+        message=" Welcome to the Zaph Tours family!"
       />
     </Box>
   );

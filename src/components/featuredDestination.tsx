@@ -2,45 +2,48 @@ import { Box, Grid, Container, Typography, Card, Button } from "@mui/material";
 
 const featuredDestinations = [
   {
-    name: "Mt. Kenya",
+    name: "Tsavo National Park",
     image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80",
-    description: "Africa's second highest peak with alpine scenery and hiking.",
+      "https://images.pexels.com/photos/18341011/pexels-photo-18341011.png",
+    description:
+      "One of the best international game reserves that has uncountable animals at sight.",
     price: "$1,200",
   },
   {
     name: "Mt. Ruwenzori",
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
-    description: "The legendary Mountains of the Moon with unique flora.",
+    description:
+      "Journey through the enigmatic Ruwenzori Mountains, where otherworldly plants thrive amidst towering peaks.",
     price: "$1,800",
   },
   {
     name: "Lake Nakuru",
     image:
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80",
-    description: "Famous for flamingos and bird species around the lake.",
+      "https://images.pexels.com/photos/20620394/pexels-photo-20620394.png",
+    description:
+      "Renowned for its vibrant flamingos and diverse bird life along its scenic shores.",
     price: "$450",
   },
   {
-    name: "Tsavo National Park",
-    image:
-      "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
-    description: "Kenya's largest national park with red elephants and lions.",
+    name: "Mt. Kenya",
+    image: "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg",
+    description: "A Sacred Peak and Symbol of Kenyan Identity.",
     price: "$680",
   },
   {
     name: "Nairobi National Park",
     image:
-      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=800&q=80",
-    description: "Urban park with wildlife and city skyline backdrop.",
+      "https://images.pexels.com/photos/46790/leopard-wildcat-big-cat-botswana-46790.jpeg",
+    description:
+      "Experience wild Africa just minutes from the city in this remarkable urban sanctuary.",
     price: "$280",
   },
   {
     name: "Coastal Kenya",
-    image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-    description: "White sand beaches, coral reefs, and rich Swahili culture.",
+    image: "https://images.pexels.com/photos/2041928/pexels-photo-2041928.jpeg",
+    description:
+      "Golden shores, underwater treasures, and the soul of Swahili tradition.",
     price: "$850",
   },
 ];
@@ -50,7 +53,7 @@ const FeaturedDestinations = () => {
     <Box
       sx={{
         background:
-          "linear-gradient(135deg, #rgb(226, 149, 33) 0%,rgb(216, 207, 122) 100%)",
+          "linear-gradient(135deg, rgb(226, 149, 33) 0%, rgb(216, 207, 122) 100%)",
         py: 4,
       }}
     >
@@ -66,16 +69,17 @@ const FeaturedDestinations = () => {
           alignItems="stretch"
         >
           {featuredDestinations.map((dest, i) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
+            <Box
               key={i}
               sx={{
+                flex: {
+                  xs: " 100%",
+                  sm: " 48%",
+                  md: "30%",
+                },
+                maxWidth: 350,
                 display: "flex",
                 justifyContent: "center",
-                width: { xs: 250, md: 350 },
               }}
             >
               <Card
@@ -84,7 +88,7 @@ const FeaturedDestinations = () => {
                   flexDirection: "column",
                   justifyContent: "space-between",
                   height: "100%",
-                  width: 300,
+                  width: "100%",
                   maxWidth: 350,
                   boxShadow: 4,
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -96,12 +100,10 @@ const FeaturedDestinations = () => {
               >
                 <Box
                   sx={{
-                    // width: { xs: 500, md: 250 },
                     height: { xs: 200, md: 250 },
                     backgroundImage: `url(${dest.image})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    margin: 0,
                   }}
                 />
                 <Box
@@ -114,7 +116,7 @@ const FeaturedDestinations = () => {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "#rgb(226, 149, 33)", mb: 1 }}
+                    sx={{ color: "rgb(226, 149, 33)", mb: 1 }}
                   >
                     {dest.name}
                   </Typography>
@@ -134,7 +136,7 @@ const FeaturedDestinations = () => {
                   >
                     <Typography
                       variant="h6"
-                      sx={{ color: "#rgb(226, 149, 33)", fontWeight: "bold" }}
+                      sx={{ color: "rgb(226, 149, 33)", fontWeight: "bold" }}
                     >
                       From {dest.price}
                     </Typography>
@@ -143,12 +145,12 @@ const FeaturedDestinations = () => {
                       size="small"
                       sx={{
                         background:
-                          "linear-gradient(to right, #rgb(226, 149, 33),rgb(230, 161, 119))",
+                          "linear-gradient(to right, rgb(226, 149, 33), rgb(230, 161, 119))",
                         borderRadius: "20px",
                         px: 2,
                         "&:hover": {
                           background:
-                            "linear-gradient(to right, #rgb(226, 149, 33),rgb(168, 174, 228))",
+                            "linear-gradient(to right, rgb(226, 149, 33), rgb(209, 211, 229))",
                         },
                       }}
                     >
@@ -157,7 +159,7 @@ const FeaturedDestinations = () => {
                   </Box>
                 </Box>
               </Card>
-            </Grid>
+            </Box>
           ))}
         </Grid>
       </Container>

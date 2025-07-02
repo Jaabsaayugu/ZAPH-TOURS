@@ -7,7 +7,6 @@ import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import Navbar from "./components/Navbar";
 
 const App: React.FC = () => {
   return (
@@ -21,7 +20,7 @@ const App: React.FC = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
-      <footer />
+      <Footer />
     </Router>
   );
 };

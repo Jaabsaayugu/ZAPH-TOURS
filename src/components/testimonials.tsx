@@ -1,30 +1,29 @@
-// import React from "react";
 import { Container, Typography, Grid, Paper, Avatar, Box } from "@mui/material";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    location: "London, UK",
-    text: "Zaph Tours made our Kenya safari absolutely magical! The guides were knowledgeable and the wildlife viewing was incredible.",
-    avatar: "SJ",
+    name: "Liam Nelson",
+    location: "Dublin, Ireland",
+    text: "An unforgettable journey through Tsavo! The landscapes, the animals, and the professionalism of Zaph Tours made it all seamless.",
+    avatar: "LN",
   },
   {
-    name: "Michael Chen",
-    location: "Sydney, Australia",
-    text: "Mt. Kenya trek with Zaph Tours was the adventure of a lifetime! Professional service and breathtaking views.",
-    avatar: "MC",
+    name: "Vin Diesel",
+    location: "Vancouver, Canada",
+    text: "I fell in love with Kenya’s coast — the colors, the people, the food. Zaph Tours brought it all together with flawless planning.",
+    avatar: "VD",
   },
   {
-    name: "Emma Rodriguez",
-    location: "Madrid, Spain",
-    text: "The coastal Kenya tour exceeded all expectations. Beautiful beaches, amazing culture, and excellent hospitality!",
-    avatar: "ER",
+    name: "Ravi Patel",
+    location: "Mumbai, India",
+    text: "The attention to detail was unmatched. From pickup to the final goodbye, every moment with Zaph Tours felt thoughtfully curated.",
+    avatar: "RP",
   },
   {
-    name: "Alex Njeri",
-    location: "Nairobi, Kenya",
-    text: "Incredible experience from booking to the last day. Highly recommend Zaph Tours for both local and international adventures!",
-    avatar: "AN",
+    name: "Amelia Becker",
+    location: "Cape Town, South Africa",
+    text: "Zaph Tours gave us more than a holiday — it was a cultural immersion, an adventure, and a memory I’ll carry forever.",
+    avatar: "AB",
   },
 ];
 
@@ -32,35 +31,38 @@ const Testimonials = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Typography variant="h3" textAlign="center" gutterBottom sx={{ mb: 6 }}>
-        What Our Travelers Say
+        Get it from the Horse Mouth
       </Typography>
 
       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {testimonials.map((testimonial, index) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
+          <Box
             key={index}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{
+              flexBasis: {
+                xs: "100%",
+                sm: "48%",
+                md: "30%",
+              },
+              maxWidth: 350,
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             <Paper
-              elevation={3}
+              elevation={4}
               sx={{
-                p: 0.1,
+                p: 3,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                height: "100%",
-                width: 220,
-                // height: 300,
-                maxWidth: 360,
+                width: "100%",
+                maxWidth: 350,
                 background:
-                  "linear-gradient(135deg,rgb(205, 209, 230) 0%,rgb(187, 169, 87) 100%)",
+                  "linear-gradient(135deg, rgb(217, 113, 38), rgb(201, 137, 18))",
                 color: "white",
-                borderRadius: 3,
-                boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+                borderRadius: 4,
+                boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
                 textAlign: "center",
               }}
             >
@@ -70,12 +72,11 @@ const Testimonials = () => {
                     width: 80,
                     height: 80,
                     mx: "auto",
-                    mb: 3,
+                    mb: 2,
                     background:
-                      "linear-gradient(to right, #rgb(226, 149, 33),rgb(223, 145, 97))",
+                      "linear-gradient(to right, rgb(226, 149, 33), rgb(223, 145, 97))",
                     fontSize: "1.5rem",
                     fontWeight: "bold",
-                    marginTop: 2,
                   }}
                 >
                   {testimonial.avatar}
@@ -86,10 +87,9 @@ const Testimonials = () => {
                     mb: 3,
                     fontStyle: "italic",
                     lineHeight: 1.6,
-                    minHeight: "90px",
                   }}
                 >
-                  "{testimonial.text}"
+                  “{testimonial.text}”
                 </Typography>
               </Box>
 
@@ -97,15 +97,12 @@ const Testimonials = () => {
                 <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                   {testimonial.name}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ opacity: 0.85, marginBottom: 2 }}
-                >
+                <Typography variant="body2" sx={{ opacity: 0.85 }}>
                   {testimonial.location}
                 </Typography>
               </Box>
             </Paper>
-          </Grid>
+          </Box>
         ))}
       </Grid>
     </Container>

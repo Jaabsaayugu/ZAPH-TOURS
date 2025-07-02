@@ -1,3 +1,4 @@
+import { Grid3x3 } from "@mui/icons-material";
 import { Box, Typography, Grid, Chip, Container } from "@mui/material";
 
 const About = () => {
@@ -7,8 +8,7 @@ const About = () => {
         About Zaph Tours
       </Typography>
       <Grid container spacing={4} alignItems="center">
-        <Grid item xs={12} md={6}></Grid>
-        <Grid item xs={12} md={6}>
+        <Box>
           <Typography
             variant="h5"
             gutterBottom
@@ -36,7 +36,14 @@ const About = () => {
           <Typography sx={{ lineHeight: 1.8, mb: 3 }}>
             ✨ Zaph Tours — Kenya Begins Where Ordinary Ends.
           </Typography>
-          <Box sx={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center"}}>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 8,
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
             <Chip
               label={
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -92,7 +99,7 @@ const About = () => {
               }}
             />
           </Box>
-        </Grid>
+        </Box>
       </Grid>
     </Container>
   );

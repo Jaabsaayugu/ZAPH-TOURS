@@ -14,7 +14,7 @@ const Home = () => {
       <FeaturedDestinations />
       <Testimonials />
       <Newsletter />
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 };
