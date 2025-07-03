@@ -19,13 +19,12 @@ import {
   Pagination,
 } from "@mui/material";
 
-
 const DestinationsPage = () => {
   const destinations = [
     {
       name: "Hell's Gate National Park",
       image:
-      "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg",
+        "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg",
       description:
         "Known for its dramatic cliffs, gorges, hot springs, and geothermal activity. A paradise for rock climbers, cyclists, and hikers.",
       groupPrice: "$1000",
@@ -42,8 +41,7 @@ const DestinationsPage = () => {
     },
     {
       name: "Diani Beach",
-      image:
-        "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
+      image: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
       description:
         "Voted one of Africa’s best beaches, Diani features white sands, palm trees, vibrant nightlife, and a stunning turquoise ocean.",
       groupPrice: "$850",
@@ -60,8 +58,7 @@ const DestinationsPage = () => {
     },
     {
       name: "Menengai Crater",
-      image:
-        "https://images.pexels.com/photos/96457/pexels-photo-96457.jpeg",
+      image: "https://images.pexels.com/photos/96457/pexels-photo-96457.jpeg",
       description:
         "One of the largest volcanic craters in the world with lush greenery and spectacular views over the Rift Valley.",
       groupPrice: "$1255",
@@ -96,8 +93,6 @@ const DestinationsPage = () => {
     },
   ];
 
-
-
   return (
     <Box
       sx={{
@@ -108,7 +103,8 @@ const DestinationsPage = () => {
     >
       <Paper
         sx={{
-          background: "linear-gradient(to right, rgb(226, 149, 33),rgb(99, 65, 6))",
+          background:
+            "linear-gradient(to right, rgb(226, 149, 33),rgb(99, 65, 6))",
           color: "white",
           borderRadius: 10,
           py: 6,
@@ -185,8 +181,7 @@ const DestinationsPage = () => {
                     backgroundPosition: "center",
                     position: "relative",
                   }}
-                >
-                </Box>
+                ></Box>
 
                 <Box
                   sx={{
@@ -237,8 +232,7 @@ const DestinationsPage = () => {
                       <Chip
                         label={`Group: ${destination.groupPrice}`}
                         sx={{
-                          background:
-                            "grey",
+                          background: "grey",
                           color: "white",
                           fontWeight: "bold",
                         }}
@@ -265,8 +259,7 @@ const DestinationsPage = () => {
                       fontWeight: "bold",
                       transition: "all 0.3s ease",
                       "&:hover": {
-                        background:
-                          "Navy",
+                        background: "Navy",
                         transform: "scale(1.05)",
                         boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
                       },

@@ -37,12 +37,7 @@ const Newsletter = () => {
           elevation={5}
           sx={{ p: 6, borderRadius: 3, textAlign: "center" }}
         >
-          <Typography
-            variant="h4"
-            color="Navy"
-            gutterBottom
-            padding={2}
-          >
+          <Typography variant="h4" color="Navy" gutterBottom padding={2}>
             Keep In Touch
           </Typography>
           <Typography variant="body1" sx={{ mb: 4, color: "#666" }}>
@@ -109,7 +104,11 @@ const Newsletter = () => {
         onClose={() => setSnackbarOpen(false)}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >
-        <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: "100%" }}>
+        <Alert
+          onClose={() => setSnackbarOpen(false)}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
           Welcome to the Zaph Tours family!
         </Alert>
       </Snackbar>

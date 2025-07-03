@@ -135,8 +135,8 @@ const TripTypes = () => (
       </Breadcrumbs>
 
       <Grid container spacing={4}>
-        {tripTypes.map((trip, ) => (
-          <Box >
+        {tripTypes.map((trip) => (
+          <Box>
             <Card
               sx={{
                 display: "flex",

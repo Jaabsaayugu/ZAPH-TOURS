@@ -58,7 +58,13 @@ const FeaturedDestinations = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h3" color="Navy" textAlign="center" gutterBottom sx={{ mb: 3 }}>
+        <Typography
+          variant="h3"
+          color="Navy"
+          textAlign="center"
+          gutterBottom
+          sx={{ mb: 3 }}
+        >
           Featured Destinations
         </Typography>
 

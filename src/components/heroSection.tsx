@@ -53,10 +53,10 @@ const HeroSection = () => {
           justifyContent: "center",
           textAlign: "center",
           zIndex: 2,
-          position: "relative"
+          position: "relative",
         }}
       >
-        <Container maxWidth="md" >
+        <Container maxWidth="md">
           <Typography
             variant="h2"
             gutterBottom

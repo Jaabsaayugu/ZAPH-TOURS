@@ -30,7 +30,13 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Typography variant="h3" color="Navy" textAlign="center" gutterBottom sx={{ mb: 6 }}>
+      <Typography
+        variant="h3"
+        color="Navy"
+        textAlign="center"
+        gutterBottom
+        sx={{ mb: 6 }}
+      >
         Get it from the Horse Mouth
       </Typography>
 

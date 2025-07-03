@@ -8,7 +8,7 @@ import Newsletter from "../components/newsletter";
 
 const Home = () => {
   return (
-    <Box  sx={{ backgroundColor:"#FFFDD0", minHeight: "100vh" }}>
+    <Box sx={{ backgroundColor: "#FFFDD0", minHeight: "100vh" }}>
       <HeroSection />
       <About />
       <FeaturedDestinations />
