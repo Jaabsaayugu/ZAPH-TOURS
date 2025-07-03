@@ -7,6 +7,7 @@ import {
   TextField,
   Button,
   Snackbar,
+  Alert,
 } from "@mui/material";
 
 const Newsletter = () => {
@@ -38,8 +39,9 @@ const Newsletter = () => {
         >
           <Typography
             variant="h4"
+            color="Navy"
             gutterBottom
-            sx={{ color: "#rgb(226, 149, 33)", mb: 3 }}
+            padding={2}
           >
             Keep In Touch
           </Typography>
@@ -94,12 +96,23 @@ const Newsletter = () => {
         </Paper>
       </Container>
 
-      <Snackbar
+      {/* <Snackbar
         open={snackbarOpen}
         autoHideDuration={4000}
         onClose={() => setSnackbarOpen(false)}
         message=" Welcome to the Zaph Tours family!"
-      />
+      /> */}
+      {/* </Snackbar> */}
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={4000}
+        onClose={() => setSnackbarOpen(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: "100%" }}>
+          Welcome to the Zaph Tours family!
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

@@ -3,7 +3,7 @@ import { Box, Typography, Grid, Chip, Container } from "@mui/material";
 const About = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Typography variant="h3" textAlign="center" gutterBottom sx={{ mb: 6 }}>
+      <Typography variant="h3" color="Navy" textAlign="center" gutterBottom sx={{ mb: 6 }}>
         About Zaph Tours
       </Typography>
       <Grid container spacing={4} alignItems="center">

@@ -58,7 +58,7 @@ const FeaturedDestinations = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h3" textAlign="center" gutterBottom sx={{ mb: 3 }}>
+        <Typography variant="h3" color="Navy" textAlign="center" gutterBottom sx={{ mb: 3 }}>
           Featured Destinations
         </Typography>
 
@@ -68,7 +68,7 @@ const FeaturedDestinations = () => {
           justifyContent="center"
           alignItems="stretch"
         >
-          {featuredDestinations.map((dest, i) => (
+          {featuredDestinations.map((fDestination, i) => (
             <Box
               key={i}
               sx={{
@@ -101,7 +101,7 @@ const FeaturedDestinations = () => {
                 <Box
                   sx={{
                     height: { xs: 200, md: 250 },
-                    backgroundImage: `url(${dest.image})`,
+                    backgroundImage: `url(${fDestination.image})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
@@ -118,13 +118,13 @@ const FeaturedDestinations = () => {
                     variant="h5"
                     sx={{ color: "rgb(226, 149, 33)", mb: 1 }}
                   >
-                    {dest.name}
+                    {fDestination.name}
                   </Typography>
                   <Typography
                     variant="body2"
                     sx={{ mb: 2, lineHeight: 1.6, flexGrow: 1 }}
                   >
-                    {dest.description}
+                    {fDestination.description}
                   </Typography>
                   <Box
                     sx={{
@@ -138,7 +138,7 @@ const FeaturedDestinations = () => {
                       variant="h6"
                       sx={{ color: "rgb(226, 149, 33)", fontWeight: "bold" }}
                     >
-                      From {dest.price}
+                      From {fDestination.price}
                     </Typography>
                     <Button
                       variant="contained"

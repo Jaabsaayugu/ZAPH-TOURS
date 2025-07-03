@@ -24,7 +24,7 @@ const HeroSection = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          zIndex: -2,
+          zIndex: 1,
         }}
       >
         <source
@@ -41,7 +41,7 @@ const HeroSection = () => {
           width: "100%",
           height: "100%",
           backgroundColor: "rgba(0, 0, 0, 0.4)",
-          zIndex: -1,
+          zIndex: 1,
         }}
       />
       <Box
@@ -52,9 +52,11 @@ const HeroSection = () => {
           paddingTop: "50vh",
           justifyContent: "center",
           textAlign: "center",
+          zIndex: 2,
+          position: "relative"
         }}
       >
-        <Container maxWidth="md">
+        <Container maxWidth="md" >
           <Typography
             variant="h2"
             gutterBottom
