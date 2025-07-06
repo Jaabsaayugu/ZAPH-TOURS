@@ -10,6 +10,13 @@ import {
 } from "@mui/material";
 const Contact = () => {
   return (
+    <Box 
+    sx={{
+      minHeight: "100vh",
+      background: "#FFFDD0",
+      paddingTop: "64px",
+    }}
+    >
     <Container>
       <Breadcrumbs sx={{ mb: 4 }}>
         <Link
@@ -107,6 +114,7 @@ const Contact = () => {
         ></iframe>
       </Box>
     </Container>
+    </Box>
   );
 };
 
