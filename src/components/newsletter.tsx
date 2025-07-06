@@ -91,13 +91,6 @@ const Newsletter = () => {
         </Paper>
       </Container>
 
-      {/* <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={4000}
-        onClose={() => setSnackbarOpen(false)}
-        message=" Welcome to the Zaph Tours family!"
-      /> */}
-      {/* </Snackbar> */}
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={4000}

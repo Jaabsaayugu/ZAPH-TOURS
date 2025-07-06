@@ -17,81 +17,7 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { CheckCircle } from "@mui/icons-material";
-
-const tripTypes = [
-  {
-    title: "Safari Adventures",
-    image:
-      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "Experience the Big Five and witness the Great Migration in Kenya's world-renowned national parks and reserves.",
-    features: [
-      "Game drives in luxury 4x4 vehicles",
-      "Professional wildlife guides",
-      "Luxury tented camps and lodges",
-      "Photography workshops",
-      "Cultural village visits",
-    ],
-    duration: "3-14 days",
-    groupSize: "2-8 people",
-    difficulty: "Easy to Moderate",
-    price: "From $450/person",
-  },
-  {
-    title: "Mountain Expeditions",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "Conquer Africa's highest peaks including Mt. Kenya, Mt. Kilimanjaro, and the mystical Rwenzori Mountains.",
-    features: [
-      "Expert mountain guides",
-      "All climbing equipment provided",
-      "Acclimatization programs",
-      "Mountain huts and camping",
-      "Summit certificates",
-    ],
-    duration: "5-21 days",
-    groupSize: "2-12 people",
-    difficulty: "Moderate to Challenging",
-    price: "From $1,200/person",
-  },
-  {
-    title: "Beach & Coastal",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    description:
-      "Relax on pristine white sand beaches, explore coral reefs, and enjoy water sports along the Indian Ocean.",
-    features: [
-      "Luxury beach resorts",
-      "Snorkeling and diving",
-      "Dhow sailing trips",
-      "Spice island tours",
-      "Swahili cooking classes",
-    ],
-    duration: "3-10 days",
-    groupSize: "2-20 people",
-    difficulty: "Easy",
-    price: "From $850/person",
-  },
-  {
-    title: "Safari Adventures",
-    image:
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
-    description:
-      "Experience the Big Five and witness the Great Migration in Kenya's world-renowned national parks and reserves.",
-    features: [
-      "Game drives in luxury 4x4 vehicles",
-      "Professional wildlife guides",
-      "Luxury tented camps and lodges",
-      "Photography workshops",
-      "Cultural village visits",
-    ],
-    duration: "3-14 days",
-    groupSize: "2-8 people",
-    difficulty: "Easy to Moderate",
-    price: "From $450/person",
-  },
-];
+import tripTypes from "../data/tripTypes";
 
 const TripTypes = () => (
   <Box
@@ -103,7 +29,7 @@ const TripTypes = () => (
   >
     <Paper
       sx={{
-        background: "linear-gradient(to right,rgb(226, 149, 33), #1d2671)",
+        background: "linear-gradient(to right,rgb(226, 149, 33),rgb(82, 64, 2))",
         color: "white",
         py: 6,
         textAlign: "center",
@@ -144,7 +70,6 @@ const TripTypes = () => (
                 flexGrow: 1,
                 borderRadius: 2,
                 overflow: "hidden",
-                // "&:hover": { boxShadow: 6 },
                 width: { xs: 530, sm: 600, md: 559 },
                 backgroundPosition: "center",
                 alignItems: "center",

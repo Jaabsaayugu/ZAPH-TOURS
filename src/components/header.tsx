@@ -41,14 +41,14 @@ function header() {
         <Button
           color="inherit"
           component={Link}
-          to="/trip-types"
+          to="/tripTypes"
           sx={navLinkStyle}
         >
           Trip Types
         </Button>
-        <Button color="inherit" component={Link} to="/blog" sx={navLinkStyle}>
+        {/* <Button color="inherit" component={Link} to="/blog" sx={navLinkStyle}>
           Blog
-        </Button>
+        </Button> */}
         <Button
           color="inherit"
           component={Link}

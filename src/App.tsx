@@ -10,7 +10,6 @@ import Footer from "./components/footer";
 const App: React.FC = () => {
   return (
     <Router>
-      {/* <Navbar/> */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
