@@ -46,13 +46,10 @@ function header() {
         >
           Trip Types
         </Button>
-        {/* <Button color="inherit" component={Link} to="/blog" sx={navLinkStyle}>
-          Blog
-        </Button> */}
         <Button
           color="inherit"
           component={Link}
-          to="/contact-us"
+          to="/contactUs"
           sx={navLinkStyle}
         >
           Contact Us

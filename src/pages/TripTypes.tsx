@@ -10,13 +10,8 @@ import {
   Button,
   Breadcrumbs,
   Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { CheckCircle } from "@mui/icons-material";
 import tripTypes from "../data/tripTypes";
 
 const TripTypes = () => (
@@ -29,7 +24,8 @@ const TripTypes = () => (
   >
     <Paper
       sx={{
-        background: "linear-gradient(to right,rgb(226, 149, 33),rgb(82, 64, 2))",
+        background:
+          "linear-gradient(to right,rgb(226, 149, 33),rgb(82, 64, 2))",
         color: "white",
         py: 6,
         textAlign: "center",
@@ -37,10 +33,10 @@ const TripTypes = () => (
     >
       <Container maxWidth="lg">
         <Typography variant="h2" fontWeight="bold" gutterBottom>
-          Trip Types & Adventures
+          Trip Types And Safaris
         </Typography>
-        <Typography variant="h6" sx={{ opacity: 0.9 }}>
-          Choose your ideal adventure across Kenya and East Africa
+        <Typography variant="h6" sx={{ opacity: 0.5 }}>
+          "Venture into the Wild Beauty of Kenya & Its Neighbors"
         </Typography>
       </Container>
     </Paper>
@@ -51,18 +47,28 @@ const TripTypes = () => (
           href="/"
           color="inherit"
           underline="none"
-          sx={{ "&:hover": { color: "#rgb(226, 149, 33)" } }}
+          sx={{
+            textDecoration: "none",
+            "&:hover": {
+              color: "Blue",
+            },
+          }}
         >
           Home
         </Link>
-        <Typography color="#rgb(226, 149, 33)" fontWeight="bold">
+        <Typography sx={{ color: "Navy", fontWeight: "bold" }}>
           Trip Types
         </Typography>
       </Breadcrumbs>
 
       <Grid container spacing={4}>
         {tripTypes.map((trip) => (
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              backgroundColor: "#f5f5f5",
+            }}
+          >
             <Card
               sx={{
                 display: "flex",
@@ -70,17 +76,19 @@ const TripTypes = () => (
                 flexGrow: 1,
                 borderRadius: 2,
                 overflow: "hidden",
-                width: { xs: 530, sm: 600, md: 559 },
+                width: { xs: 600, lg: 500, sm: 250, md: 400 },
+                maxWidth: "100%",
                 backgroundPosition: "center",
-                alignItems: "center",
-                justifyContent: "center",
                 margin: "auto",
+                boxShadow: 3,
               }}
             >
               <CardMedia
                 component="img"
                 height="200"
-                image={trip.image}
+                image={
+                  Array.isArray(trip.images) ? trip.images[0] : trip.images
+                }
                 alt={trip.title}
               />
               <CardContent
@@ -90,37 +98,13 @@ const TripTypes = () => (
                   variant="h5"
                   fontWeight="bold"
                   gutterBottom
-                  color="#rgb(226, 149, 33)"
+                  color="blue"
                 >
                   {trip.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" paragraph>
+                <Typography variant="body2" color="black" paragraph>
                   {trip.description}
                 </Typography>
-
-                <Typography
-                  variant="subtitle2"
-                  fontWeight="bold"
-                  color="#rgb(226, 149, 33)"
-                >
-                  What's Included:
-                </Typography>
-                <List dense sx={{ mb: 2 }}>
-                  {trip.features.map((feature, i) => (
-                    <ListItem key={i} disablePadding>
-                      <ListItemIcon sx={{ minWidth: 32 }}>
-                        <CheckCircle fontSize="small" color="secondary" />
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={feature}
-                        primaryTypographyProps={{
-                          variant: "body2",
-                          color: "#555",
-                        }}
-                      />
-                    </ListItem>
-                  ))}
-                </List>
 
                 <Box
                   sx={{
@@ -130,49 +114,44 @@ const TripTypes = () => (
                     flexWrap: "wrap",
                   }}
                 >
-                  <Typography variant="caption" color="#999">
+                  <Typography variant="caption" color="black" fontWeight="bold">
                     Duration:{" "}
                     <Typography
                       component="span"
                       variant="body2"
                       fontWeight="bold"
-                      color="#rgb(226, 149, 33)"
+                      color="navy"
                     >
                       {trip.duration}
                     </Typography>
                   </Typography>
-                  <Typography variant="caption" color="#999">
-                    Group:{" "}
-                    <Typography
-                      component="span"
-                      variant="body2"
-                      fontWeight="bold"
-                      color="#rgb(226, 149, 33)"
-                    >
-                      {trip.groupSize}
-                    </Typography>
-                  </Typography>
                 </Box>
-                <Typography variant="caption" color="#999">
-                  Difficulty:{" "}
-                  <Typography
-                    component="span"
-                    variant="body2"
-                    fontWeight="bold"
-                    color="#rgb(226, 149, 33)"
-                  >
-                    {trip.difficulty}
-                  </Typography>
-                </Typography>
-                <Typography variant="caption" color="#999">
+
+                <Typography variant="caption" color="Black" fontWeight="bold">
                   Price:{" "}
                   <Typography
                     component="span"
                     variant="body2"
                     fontWeight="bold"
-                    color="#rgb(226, 149, 33)"
+                    color="navy"
                   >
-                    {trip.price}
+                    {typeof trip.price === "string" ? (
+                      trip.price
+                    ) : trip.price && typeof trip.price === "object" ? (
+                      <>
+                        <span color="green">
+                          ⭐ Standard: {trip.price.standard}
+                        </span>
+                        {trip.price.offer && (
+                          <>
+                            {" ⭐ "}
+                            <span>Offer: {trip.price.offer}</span>
+                          </>
+                        )}
+                      </>
+                    ) : (
+                      ""
+                    )}
                   </Typography>
                 </Typography>
 
@@ -181,13 +160,12 @@ const TripTypes = () => (
                   fullWidth
                   sx={{
                     mt: 2,
-                    background:
-                      "linear-gradient(to right, #rgb(226, 149, 33),rgb(236, 154, 103))",
+                    background: "blue",
                     borderRadius: "24px",
                     py: 1,
                   }}
                 >
-                  Learn More
+                  Start Now
                 </Button>
               </CardContent>
             </Card>
